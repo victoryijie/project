@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = "bwhizzy25/recipe-booking-app"
-        APP_SERVER = "ec2-user@13.40.225.242"
+        IMAGE_NAME = "victoryijie147/newproject"
+        APP_SERVER = "ec2-user@35.177.211.150"
     }
 
     stages {
@@ -11,7 +11,7 @@ pipeline {
         stage('Checkout Code') {
             steps {
                 git branch: 'main',
-                    url: 'https://github.com/victoryijie/eserepo.git'
+                    url: 'hhttps://github.com/victoryijie/project.git'
             }
         }
 
