@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<form method="post">
+    <div class="mb-3">
+        <input class="form-control" name="title" value="{{ recipe.title }}" required>
+    </div>
+    <div class="mb-3">
+        <textarea class="form-control" name="description" required>{{ recipe.description }}</textarea>
+    </div>
+    <button class="btn btn-success">Update</button>
+</form>
+{% endblock %}

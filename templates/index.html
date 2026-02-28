@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+<a href="/add" class="btn btn-primary mb-3">Add Recipe</a>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Actions</th>
+    </tr>
+    {% for recipe in recipes %}
+    <tr>
+        <td>{{ recipe.title }}</td>
+        <td>{{ recipe.description }}</td>
+        <td>
+            <a href="/edit/{{ recipe.id }}" class="btn btn-warning btn-sm">Edit</a>
+            <a href="/delete/{{ recipe.id }}" class="btn btn-danger btn-sm">Delete</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
